@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, CardBody, CardImg, CardText, CardTitle } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Rating from './Rating.jsx'
+
 
 const Product = ({product}) => {
   return (
@@ -16,12 +18,12 @@ const Product = ({product}) => {
           </CardTitle>
         </Link>
 
-        {/* <CardText as='div'>
+        <CardText as='div'>
           <Rating
             value={product.rating}
             text={`${product.numReviews} reviews`}
           />
-        </CardText> */}
+        </CardText>
 
         <CardText as='h3'>${product.price}</CardText>
       </CardBody>
@@ -29,4 +31,4 @@ const Product = ({product}) => {
   )
 }
 
-export default Product
+export default Product;
